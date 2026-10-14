@@ -44,4 +44,12 @@ public class ControladorColegio {
                 return Double.compare(p2.getSalarioTotal(), p1.getSalarioTotal());
             }
         });        
-
+        StringBuilder sb = new StringBuilder();
+        sb.append("Profesores ordenados por salario (Mayor a Menor) \n");
+        for (Profesor p : profesoresOrdenados) {
+            sb.append(p.mostrarInformacion())
+              .append("Prestaciones: ").append(p.getPrestaciones()).append("\n");
+        }
+        return sb.toString();
+    }
+}
