@@ -26,5 +26,11 @@ public class ControladorColegio {
         Profesor p = new Profesor(nombre, dir, tel, fecha, cedula, area, horas, salarioHora);
         colegio.agregarProfesor(p);
     }
-    
+    public String generarReporteEstudiantes() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Lista de estudiantes \n");
+        for (Estudiante e : colegio.getListaEstudiantes()) {
+            sb.append(e.mostrarInformacion()).append("\n");
+        }
+        return sb.toString();    
 }
