@@ -22,8 +22,17 @@ public class ControladorColegio {
         Estudiante e = new Estudiante(nombre, dir, tel, fecha, codigo, grado);
         colegio.agregarEstudiante(e);
     }
-        public void agregarProfesor(String nombre, String dir, String tel, String fecha, String cedula, String area, int horas, double salarioHora) {
+    public void agregarProfesor(String nombre, String dir, String tel, String fecha, String cedula, String area, int horas, double salarioHora) {
         Profesor p = new Profesor(nombre, dir, tel, fecha, cedula, area, horas, salarioHora);
         colegio.agregarProfesor(p);
+    }
+        
+    public String generarReporteEstudiantes() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Lista de estudiantes \n");
+        for (Estudiante e : colegio.getListaEstudiantes()) {
+            sb.append(e.mostrarInformacion()).append("\n");
+        }
+        return sb.toString();
     }
 }
