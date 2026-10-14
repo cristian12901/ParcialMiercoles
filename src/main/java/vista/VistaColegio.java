@@ -4,11 +4,16 @@
  */
 package vista;
 
+import controlador.ControladorColegio;
+
+
 /**
  *
  * @author alex
  */
 public class VistaColegio extends javax.swing.JPanel {
+    
+    private ControladorColegio controlador = new ControladorColegio();
 
     /**
      * Creates new form VistaColegio
